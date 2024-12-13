@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+__pycache__/
+venv/
+
+# Environment files
+.env
+.env.local
+
+# Build files
+/build
+/dist
+
+# IDE files
+.vscode/
+.idea/

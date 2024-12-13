@@ -1,0 +1,35 @@
+{
+  "name": "@nounsspeak/translator",
+  "version": "1.0.1",
+  "description": "A package to translate English to Nouns language and vice versa.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "node build.js && tsc --emitDeclarationOnly",
+    "test": "deno test",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "nouns",
+    "translation",
+    "language"
+  ],
+  "author": "0xd",
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.20.2",
+    "glob": "^10.4.5",
+    "typescript": "^5.0.0"
+  }
+}
