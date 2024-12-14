@@ -2,6 +2,9 @@
 
 import React, { useState } from "react";
 import { translate, isNogs } from "../../../engine/src/index";
+import farcasterIcon from "@/assets/farcasterIcon.svg";
+import twitterIcon from "@/assets/twitterIcon.svg";
+import Image from "next/image";
 
 const TranslateComponent: React.FC = () => {
   const [inputText, setInputText] = useState<string>("");
@@ -152,10 +155,8 @@ const TranslateComponent: React.FC = () => {
         value={inputText}
         onChange={handleInputChange}
         placeholder={
-          (replaceSpaces
-            ? "write-or-paste-your-text-here"
-            : "write or paste your text here") +
-          "\n\n◧◨▢ ▢◩ ◩◧ ◨▢ ◪◨ ▢◧ ▢◩ ▢◨ ◧◧ ◧▢ ◨▢ ◪◨ ▢◧◨ ▢◧ ◪▢ ▢◩ ◨▢ ◪◨ ◧▢◨ ◨▢ ◪◪ ◪◨ ▢◩ ◪◨"
+          (replaceSpaces ? "talk-to-me" : "talk to me") +
+          "\n\n◨▢ ◧◧ ◨◩ ◧◩ ◨▢ ▢◧ ◩◩ ◪◨"
         }
         className=" border-gray-400"
       />
@@ -204,16 +205,21 @@ const TranslateComponent: React.FC = () => {
             <button
               onClick={handleCastToWarpcast}
               disabled={!outputText || outputText.length > 1024}
-              className="border border-gray-400 bg-transparent rounded-lg px-5 py-2 justify-between items-center text-sm hover:bg-[#7c65c1] hover:text-[#e5e3d9] cursor-pointer"
+              className="border border-gray-400 bg-transparent rounded-lg px-5 py-2 justify-between items-center text-sm hover:bg-[#7c65c1] cursor-pointer"
             >
-              Cast
+              <Image
+                src={farcasterIcon}
+                alt="farcaster"
+                width={28}
+                height={28}
+              />
             </button>
             <button
               onClick={handlePostToTwitter}
               disabled={!outputText || outputText.length > 280}
-              className="border border-gray-400 bg-transparent rounded-lg px-5 py-2 justify-between items-center text-sm ml-3 hover:bg-[#000000] hover:text-[#e5e3d9] cursor-pointer"
+              className="border border-gray-400 bg-transparent rounded-lg px-5 py-2 justify-between items-center text-sm ml-3 hover:bg-[#ffffff] cursor-pointer"
             >
-              X
+              <Image src={twitterIcon} alt="twitter" width={28} height={28} />
             </button>
           </div>
         </div>

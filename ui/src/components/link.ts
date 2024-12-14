@@ -1,10 +1,5 @@
 export const projectLinks = [
     {
-        title :"GITHUB",
-        links :"",
-
-    },
-    {
         title :"DEXSCREENER",
         links :"",
 
