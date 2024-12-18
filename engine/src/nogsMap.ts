@@ -1,4 +1,4 @@
-/** Mapping of characters to their dolphinspeak equivalents */
+/** Mapping of characters to their nogsSpeak equivalents */
 
 export const nogsMap: { [key: string]: string } = {
   "a": "◧◧",
